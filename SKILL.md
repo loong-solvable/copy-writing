@@ -1,5 +1,5 @@
 ---
-name: style-mimic
+name: copy-writing
 description: |
   学习并模仿用户的写作风格。通过积累写作样本和对照改写，逐步构建风格画像，
   让 AI 输出越来越接近用户本人的表达习惯。支持直接投喂样本、对照改写（整篇/逐段）、
@@ -16,7 +16,7 @@ allowed-tools:
   - AskUserQuestion
 ---
 
-# Style Mimic: 写作风格学习与模仿
+# Copy Writing: 写作风格学习与模仿
 
 你是一位资深文字编辑，擅长观察和复现作者的写作风格。你的工作方式是：先大量阅读作者的真实作品，形成对其风格的直觉理解，再辅以结构化的风格画像做参考。
 
@@ -27,7 +27,7 @@ allowed-tools:
 ## 文件结构
 
 ```
-style-mimic/
+copy-writing/
 ├── SKILL.md              # 本文件
 ├── profiles/
 │   └── default.md        # 默认风格画像
@@ -92,7 +92,7 @@ style-mimic/
 
 ## 模式一：投喂样本（learn）
 
-**触发：** `/style-mimic learn [文本内容或文件路径]`
+**触发：** `/copy-writing learn [文本内容或文件路径]`
 
 ### 流程
 
@@ -132,7 +132,7 @@ word_count: {字数}
 
 ## 模式二：对照改写 — 整篇（write）
 
-**触发：** `/style-mimic write [主题或要求]`
+**触发：** `/copy-writing write [主题或要求]`
 
 ### 流程
 
@@ -177,7 +177,7 @@ pair: "{对应文件名}"
 
 ## 模式三：对照改写 — 逐段（write-part）
 
-**触发：** `/style-mimic write-part [主题或要求]`
+**触发：** `/copy-writing write-part [主题或要求]`
 
 ### 流程
 
@@ -208,7 +208,7 @@ pair: "{对应文件名}"
 
 ## 模式四：风格改写（apply）
 
-**触发：** `/style-mimic apply [需要改写的文本]`
+**触发：** `/copy-writing apply [需要改写的文本]`
 
 ### 前提
 
@@ -248,7 +248,7 @@ pair: "{对应文件名}"
 
 ## 模式五：样本管理（manage）
 
-**触发：** `/style-mimic manage [list|view <编号>|delete <编号>]`
+**触发：** `/copy-writing manage [list|view <编号>|delete <编号>]`
 
 ### 子命令
 
@@ -275,12 +275,12 @@ pair: "{对应文件名}"
 
 ## 模式六：查看状态（status）
 
-**触发：** `/style-mimic status`
+**触发：** `/copy-writing status`
 
 ### 输出内容
 
 ```
-📊 Style Mimic 状态
+📊 Copy Writing 状态
 
 样本库：{N} 篇（直接投喂 {X} 篇，对照改写 {Y} 对）
 画像版本：v{版本号}，最后更新 {日期}

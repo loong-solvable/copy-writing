@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import wx-cli JSON output into style-mimic direct samples."""
+"""Import wx-cli JSON output into copy-writing direct samples."""
 
 from __future__ import annotations
 
@@ -188,7 +188,7 @@ def import_wx_cli_json(
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Import wx-cli JSON output into the style-mimic sample library."
+        description="Import wx-cli JSON output into the copy-writing sample library."
     )
     parser.add_argument(
         "input",
@@ -197,7 +197,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--output-root",
         default=str(Path(__file__).resolve().parent.parent),
-        help="style-mimic root directory. Defaults to this script's parent skill directory.",
+        help="copy-writing root directory. Defaults to this script's parent skill directory.",
     )
     parser.add_argument("--topic", help="Optional sample topic. Defaults to chat name or file name.")
     parser.add_argument(
